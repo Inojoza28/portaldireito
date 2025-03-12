@@ -161,8 +161,12 @@ async function carregarAulaDoDia() {
       </h2>
     `;
 
-    // Se for segunda-feira e houver mais de uma aula, destaque essa informação
-    if (chaveDia === "segunda" && diaData.length > 1) {
+    // Verifica se É segunda-feira E há duas ou mais aulas
+    const ehSegunda = (chaveDia === "segunda");
+    const temVariasAulas = (diaData.length > 1);
+
+    if (ehSegunda && temVariasAulas) {
+      // Exibe um aviso especial
       htmlAulas += `
         <p style="font-weight: bold; margin: 0 0 1rem 0; color: #333;">
           Hoje temos duas aulas diferentes! Fique atento(a) aos horários.
@@ -204,12 +208,21 @@ async function carregarAulaDoDia() {
         `;
       }
 
-      // Título ou mini-título da aula, com a contagem "Aula 1", "Aula 2", etc.
-      htmlAulas += `
-        <h3 style="margin: 0 0 0.7rem 0; font-size: 1.05rem;">
-          Aula ${index + 1}: ${disciplina}
-        </h3>
-      `;
+      // Se for segunda-feira com várias aulas, usamos "Aula X: Disciplina"
+      // Caso contrário, apenas o nome da disciplina
+      if (ehSegunda && temVariasAulas) {
+        htmlAulas += `
+          <h3 style="margin: 0 0 0.7rem 0; font-size: 1.05rem;">
+            Aula ${index + 1}: ${disciplina}
+          </h3>
+        `;
+      } else {
+        htmlAulas += `
+          <h3 style="margin: 0 0 0.7rem 0; font-size: 1.05rem;">
+            ${disciplina}
+          </h3>
+        `;
+      }
 
       // Professor, Horário, Sala
       htmlAulas += `
