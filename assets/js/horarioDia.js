@@ -176,7 +176,7 @@ async function carregarAulaDoDia() {
     let maxEndInMinutes = -Infinity;
 
     // Se for segunda-feira e houver múltiplas aulas, exibimos o aviso
-    const ehSegunda = (chaveDia === "quarta");
+    const ehSegunda = (chaveDia === "segunda");
     const temVariasAulas = (diaData.length > 1);
     if (ehSegunda && temVariasAulas) {
       htmlAulas += `
