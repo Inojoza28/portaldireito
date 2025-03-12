@@ -100,6 +100,7 @@ async function carregarAulaDoDia() {
       infoAulaEl.className = "info-aula";
 
       if (status === "feriado") {
+        // Feriado
         infoAulaEl.classList.add("info-aula--feriado");
         infoAulaEl.innerHTML = `
           <h2 style="margin-bottom: 1rem;">
@@ -146,27 +147,38 @@ async function carregarAulaDoDia() {
 
     // Ajusta a classe base do container
     infoAulaEl.className = "info-aula";
+
+    // Definimos o título principal dinamicamente, dependendo do status:
+    let tituloPrincipal = "Aulas de Hoje"; // padrão
     if (todosCancelados) {
+      // Se todas as aulas do dia forem canceladas
       infoAulaEl.classList.add("info-aula--cancelada");
+      tituloPrincipal = "Aula Cancelada";
     } else if (todosOnline) {
+      // Se todas as aulas do dia forem online
       infoAulaEl.classList.add("info-aula--online");
+      tituloPrincipal = "Aula Online";
     } else {
+      // Status normal ou misto
       infoAulaEl.classList.add("info-aula--normal");
     }
 
-    // Título principal do card
+    // Cabeçalho principal
     let htmlAulas = `
       <h2 style="margin-bottom: 1rem;">
-        <i class="fas fa-book"></i> Aulas de Hoje
+        <i class="fas fa-book"></i> ${tituloPrincipal}
       </h2>
     `;
 
-    // Verifica se É segunda-feira E há duas ou mais aulas
-    const ehSegunda = (chaveDia === "segunda");
-    const temVariasAulas = (diaData.length > 1);
+    // Para exibir "quando começa/termina" de forma global,
+    // pegamos o menor horário de início e o maior de término
+    let minStartInMinutes = Infinity;
+    let maxEndInMinutes = -Infinity;
 
+    // Se for segunda-feira e houver múltiplas aulas, exibimos o aviso
+    const ehSegunda = (chaveDia === "quarta");
+    const temVariasAulas = (diaData.length > 1);
     if (ehSegunda && temVariasAulas) {
-      // Exibe um aviso simples, com apenas uma bordinha à esquerda
       htmlAulas += `
         <p style="
           border-left: 4px solid #1c447c;
@@ -180,12 +192,7 @@ async function carregarAulaDoDia() {
       `;
     }
 
-    // Para exibir "quando começa/termina" de forma global,
-    // pegamos o menor horário de início e o maior de término
-    let minStartInMinutes = Infinity;
-    let maxEndInMinutes = -Infinity;
-
-    // Montamos cada aula dentro do mesmo card, separando com <hr> se houver mais de uma
+    // Montamos cada aula dentro do mesmo card
     diaData.forEach((aula, index) => {
       const {
         disciplina,
@@ -214,8 +221,7 @@ async function carregarAulaDoDia() {
         `;
       }
 
-      // Se for segunda-feira com várias aulas, mostramos "Aula X: Disciplina"
-      // Caso contrário, apenas o nome da disciplina
+      // Se segunda-feira com várias aulas, mostra "Aula X: Disciplina"
       if (ehSegunda && temVariasAulas) {
         htmlAulas += `
           <h3 style="margin: 0 0 0.7rem 0; font-size: 1.05rem;">
