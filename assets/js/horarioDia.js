@@ -166,9 +166,15 @@ async function carregarAulaDoDia() {
     const temVariasAulas = (diaData.length > 1);
 
     if (ehSegunda && temVariasAulas) {
-      // Exibe um aviso especial
+      // Exibe um aviso simples, com apenas uma bordinha à esquerda
       htmlAulas += `
-        <p style="font-weight: bold; margin: 0 0 1rem 0; color: #333;">
+        <p style="
+          border-left: 4px solid #1c447c;
+          padding-left: 0.6rem;
+          margin: 0 0 2rem 0;
+          font-weight: 500;
+          color: #333;
+        ">
           Hoje temos duas aulas diferentes! Fique atento(a) aos horários.
         </p>
       `;
@@ -208,7 +214,7 @@ async function carregarAulaDoDia() {
         `;
       }
 
-      // Se for segunda-feira com várias aulas, usamos "Aula X: Disciplina"
+      // Se for segunda-feira com várias aulas, mostramos "Aula X: Disciplina"
       // Caso contrário, apenas o nome da disciplina
       if (ehSegunda && temVariasAulas) {
         htmlAulas += `
