@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portal de Aulas - Uma aplicação web minimalista e responsiva que fornece aos alunos acesso rápido ao horário diário, semanal, grupo do WhatsApp e Instagram da sala, com informações completas sobre disciplina, professor e sala de aula." />
+    <meta name="keywords" content="portal de aulas, horário, Direito, aulas, front-end, minimalista, responsivo, sala de aula" />
+    <meta name="theme-color" content="#002f6c" />
+    <meta name="author" content="Gabriel Inojoza" />
+
+    <title>Portal de Aulas</title>
+    <!-- Fonte e estilos -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/img/Logo.png" />
+    <!-- Ícones (exemplo usando FontAwesome) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-acb5+..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <!-- Botão de hambúrguer à esquerda -->
+      <button class="menu-toggle" onclick="abrirMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="site-title-wrapper">
+        <img src="assets/img/Logo.png" alt="Logo" class="logo-pequena" />
+        <h1 class="site-title">Portal de Aulas</h1>
+      </div>
+
+      <!-- Curso Info à direita (se você já usa) -->
+      <div class="curso-info">
+        <span class="curso-nome">Curso</span>
+        <span class="curso-ads">DIR</span>
+      </div>
+    </header>
+
+    <!-- MENU LATERAL (inicialmente oculto à esquerda) -->
+    <div id="sideMenu" class="side-menu">
+      <!-- Topo do Menu (Título + Botão de Fechar) -->
+      <div class="menu-header">
+        <h2>Menu</h2>
+        <!-- Novo título ao lado do botão de fechar -->
+        <button class="close-menu" onclick="fecharMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Conteúdo do Menu -->
+      <div class="menu-content">
+        <h2>Informações</h2>
+        <hr class="linha-informacoes" />
+        <!-- Linha mais grossa abaixo do título -->
+        <p>
+          <i class="fas fa-graduation-cap"></i> <strong>Curso:</strong> Direito
+        </p>
+        <p>
+          <i class="fas fa-clock"></i> <strong>Período:</strong> 1º Período
+          (Noturno)
+        </p>
+        <p><i class="fas fa-users"></i> <strong>Turma:</strong> A (2025/1)</p>
+        <p>
+          <i class="fas fa-university"></i>
+          <strong>Faculdade:</strong> Faculdade Uninassau - Boa Viagem
+        </p>
+      </div>
+    </div>
+
+    <!-- OVERLAY (cobre a tela atrás do menu) -->
+    <div id="menuOverlay" class="menu-overlay" onclick="fecharMenu()"></div>
+
+    <!-- CONTEÚDO PRINCIPAL: 4 cartões -->
+    <main class="cards-container">
+      <!-- Card: Horário do Dia -->
+      <div class="card card-horario-dia" onclick="abrirHorarioDia()">
+        <div class="card-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <div class="card-content">
+          <h2>Horário do Dia</h2>
+          <p>Veja a aula de hoje</p>
+        </div>
+      </div>
+
+      <!-- Card: Horário Semanal -->
+      <div class="card card-horario-semanal" onclick="abrirHorarioSemanal()">
+        <div class="card-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="card-content">
+          <h2>Horário Semanal</h2>
+          <p>Visualize e baixe o horário completo</p>
+        </div>
+      </div>
+
+      <!-- Card: Portal do Aluno -->
+      <div class="card card-portal-aluno" onclick="abrirPortalAluno()">
+        <div class="card-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <div class="card-content">
+          <h2>Portal do Aluno</h2>
+          <p>Acesse o portal e a sala virtual</p>
+        </div>
+      </div>
+
+      <!-- Card: Grupo do WhatsApp -->
+      <!-- <div class="card card-whatsapp" onclick="redirecionarWhatsApp()">
+        <div class="card-icon">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="card-content">
+          <h2>Grupo WhatsApp</h2>
+          <p>Entre e se comunique com os colegas</p>
+        </div>
+      </div> -->
+
+      <!-- Card: Instagram da Sala -->
+      <div class="card card-instagram" onclick="redirecionarInstagram()">
+        <div class="card-icon">
+          <i class="fab fa-instagram"></i>
+        </div>
+        <div class="card-content">
+          <h2>Instagram do Curso</h2>
+          <p>Acompanhe novidades e eventos</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        <span>Uninassau - Boa Viagem</span>
+        <span class="divider">•</span>
+        <a href="https://www.instagram.com/dev_inojoza_/" target="_blank">
+          <i class="fab fa-instagram"></i> dev_inojoza_
+        </a>
+      </p>
+    </footer>
+    
+
+    <!-- Script principal -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

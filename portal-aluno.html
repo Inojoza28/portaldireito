@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal de Aulas - Uma aplicação web minimalista e responsiva que fornece aos alunos acesso rápido ao horário diário, semanal, grupo do WhatsApp e Instagram da sala, com informações completas sobre disciplina, professor e sala de aula." />
+  <meta name="keywords" content="portal de aulas, horário, Direito, aulas, front-end, minimalista, responsivo, sala de aula" />
+  <meta name="theme-color" content="#002f6c">
+  <meta name="author" content="Gabriel Inojoza" />
+  <title>Portal do Aluno</title>
+  <link rel="stylesheet" href="assets/css/portal-do-aluno.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/Logo.png">
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-acb5+..."
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+    <header class="header">
+        <button onclick="voltarHome()" class="btn-voltar">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+    
+        <div class="site-title-wrapper">
+            <img src="assets/img/Logo.png" alt="Logo" class="logo-pequena" />
+            <h1 class="site-title">Portal do Aluno</h1>
+          </div>
+    
+        <div class="curso-info">
+          <span class="curso-nome">Curso</span>
+          <span class="curso-ads">DIR</span>
+        </div>
+      </header>
+
+  <main class="container-unico">
+    <div class="card card-unico-portal">
+      <div class="card-icon">
+        <i class="fas fa-user-graduate"></i>
+      </div>
+      <div class="card-content">
+        <h2>Acesse</h2>
+        <p>Selecione uma das opções abaixo para continuar:</p>
+        <div class="link-container">
+          <a href="https://aluno.uninassau.edu.br/" target="_blank" class="portal-link">
+            <i class="fas fa-globe"></i>
+            Portal Oficial do Aluno
+          </a>
+
+          <a href="https://serconnect.sereducacional.com/" target="_blank" class="portal-link">
+            <i class="fas fa-chalkboard-teacher"></i>
+            Sala de Aula Virtual
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>
+      <span>Uninassau - Boa Viagem</span>
+      <span class="divider">•</span>
+      <a href="https://www.instagram.com/dev_inojoza_/" target="_blank">
+        <i class="fab fa-instagram"></i> dev_inojoza_
+      </a>
+    </p>
+  </footer>
+  <script>
+    function voltarHome() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{
+"segunda": [
+  {
+    "disciplina": "Português Jurídico",
+    "professor": "Isabella Taveira",
+    "sala": "508",
+    "inicio": "18:00",
+    "termino": "20:00",
+    "status": "normal",
+    "observacoes": ""
+  },
+  {
+    "disciplina": "Filosofia do Direito",
+    "professor": "Girleyde Dantas",
+    "sala": "508",
+    "inicio": "20:00",
+    "termino": "22:00",
+    "status": "normal",
+    "observacoes": ""
+  }
+],
+
+  "terca": 
+    {
+      "disciplina": "Política, Estado e Democracia",
+      "professor": "Eduarda Cunha",
+      "sala": "608",
+      "inicio": "20:00",
+      "termino": "22:00",
+      "status": "normal",
+      "observacoes": "",
+      "linkOnline": ""
+    },
+  
+  "quarta": 
+    {
+      "disciplina": "Desenvolvimento Pessoal e Trabalhabilidade",
+      "professor": "Victor Leite",
+      "sala": "",
+      "inicio": "19:00",
+      "termino": "22:00",
+      "status": "online",
+      "observacoes": "TEAMS",
+      "linkOnline": ""
+    },
+
+  "quinta": 
+    {
+      "disciplina": "Direito: Profissão e Carreira na Era Digital",
+      "professor": "Girleyde Dantas",
+      "sala": "411",
+      "inicio": "19:00",
+      "termino": "22:00",
+      "status": "normal",
+      "observacoes": "",
+      "linkOnline": ""
+    },
+  
+  "sexta": 
+    {
+      "disciplina": "Sociologia e Antropologia Jurídica",
+      "professor": "Lucas Alencar",
+      "sala": "409",
+      "inicio": "20:00",
+      "termino": "22:00",
+      "status": "normal",
+      "observacoes": "",
+      "linkOnline": ""
+    }
+  
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal de Aulas - Uma aplicação web minimalista e responsiva que fornece aos alunos acesso rápido ao horário diário, semanal, grupo do WhatsApp e Instagram da sala, com informações completas sobre disciplina, professor e sala de aula." />
+  <meta name="keywords" content="portal de aulas, horário, Direito, aulas, front-end, minimalista, responsivo, sala de aula" />
+  <meta name="theme-color" content="#002f6c">
+  <meta name="author" content="Gabriel Inojoza" />
+  <title>Horário Semanal</title>
+  <link rel="stylesheet" href="assets/css/modal-horario.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/Logo.png">
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-acb5+..."
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header class="header">
+    <button onclick="voltarHome()" class="btn-voltar">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <div class="site-title-wrapper">
+        <img src="assets/img/Logo.png" alt="Logo" class="logo-pequena" />
+        <h1 class="site-title">Horário Semanal</h1>
+      </div>
+
+    <div class="curso-info">
+      <span class="curso-nome">Curso</span>
+      <span class="curso-ads">DIR</span>
+    </div>
+  </header>
+
+  <main class="container-unico">
+    <!-- Card único com imagem do horário -->
+    <div class="card card-unico-semanal">
+      <div class="card-icon">
+        <i class="fas fa-calendar-alt"></i>
+      </div>
+      <div class="card-content">
+        <img 
+          id="img-horario-semanal" 
+          src="assets/img/horario-semanal.png" 
+          alt="Horário Semanal"
+          onclick="abrirModalImagem()"
+        />
+        <button onclick="baixarImagem()" class="btn-baixar">
+          <i class="fas fa-download"></i> Baixar Horário
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal para exibir imagem em tela cheia -->
+<div class="modal-imagem" id="modalImagem">
+  <button class="close-modal" onclick="fecharModalImagem()">&times;</button>
+  <img src="" alt="Horário Ampliado" id="imagemModal" />
+</div>
+
+
+<footer class="footer">
+  <p>
+    <span>Uninassau - Boa Viagem</span>
+    <span class="divider">•</span>
+    <a href="https://www.instagram.com/dev_inojoza_/" target="_blank">
+      <i class="fab fa-instagram"></i> dev_inojoza_
+    </a>
+  </p>
+</footer>  
+  
+  <script src="assets/js/horarioSemanal.js"></script>
+</body>
+</html>

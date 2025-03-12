@@ -1,0 +1,65 @@
+{
+    "excecoes": {
+      "2025-01-01": {
+        "status": "feriado",
+        "observacoes": "Confraternização Universal (Ano Novo) - Feriado nacional fixo"
+      },
+      "2025-02-28": {
+        "status": "feriado",
+        "observacoes": "Carnaval (Sexta-feira) - feriado municipal/estadual em muitos locais"
+      },
+      "2025-03-03": {
+        "status": "feriado",
+        "observacoes": "Carnaval (Segunda-feira) - feriado municipal/estadual em muitos locais"
+      },
+      "2025-03-04": {
+        "status": "feriado",
+        "observacoes": "Carnaval (Terça-feira) - feriado municipal/estadual em muitos locais"
+      },
+      "2025-03-05": {
+        "status": "feriado",
+        "observacoes": "Carnaval (Quarta-feira) - feriado municipal/estadual em muitos locais"
+      },
+      "2025-03-06": {
+        "status": "feriado",
+        "observacoes": "Feriado da Carta Magna"
+      },
+      "2025-04-18": {
+        "status": "feriado",
+        "observacoes": "Sexta-Feira Santa (Paixão de Cristo) - Feriado nacional móvel"
+      },
+      "2025-04-21": {
+        "status": "feriado",
+        "observacoes": "Tiradentes - Feriado nacional fixo"
+      },
+      "2025-05-01": {
+        "status": "feriado",
+        "observacoes": "Dia do Trabalhador - Feriado nacional fixo"
+      },
+      "2025-06-19": {
+        "status": "feriado",
+        "observacoes": "Corpus Christi - Feriado nacional móvel"
+      },
+      "2025-09-07": {
+        "status": "feriado",
+        "observacoes": "Independência do Brasil - Feriado nacional fixo"
+      },
+      "2025-10-12": {
+        "status": "feriado",
+        "observacoes": "Nossa Senhora Aparecida - Feriado nacional fixo"
+      },
+      "2025-11-02": {
+        "status": "feriado",
+        "observacoes": "Finados - Feriado nacional fixo"
+      },
+      "2025-11-15": {
+        "status": "feriado",
+        "observacoes": "Proclamação da República - Feriado nacional fixo"
+      },
+      "2025-12-25": {
+        "status": "feriado",
+        "observacoes": "Natal - Feriado nacional fixo"
+      }
+    }
+  }
+  
